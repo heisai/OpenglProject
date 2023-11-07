@@ -1,4 +1,0 @@
-E:/OPENGL/OpenglProject/opengl_rectangle/build/CMakeFiles/opengl_rectangle.dir
-E:/OPENGL/OpenglProject/opengl_rectangle/build/CMakeFiles/GLAD.dir
-E:/OPENGL/OpenglProject/opengl_rectangle/build/CMakeFiles/edit_cache.dir
-E:/OPENGL/OpenglProject/opengl_rectangle/build/CMakeFiles/rebuild_cache.dir
