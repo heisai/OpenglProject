@@ -1,0 +1,10 @@
+# ninja log v5
+52	752	7210747068161540	CMakeFiles/GLAD.dir/src/glad.c.obj	347693b12ba3ca95
+755	926	7210747069838012	GLAD.lib	21850b5f33267d76
+35	1218	7210747072829367	CMakeFiles/opengl_rectangle.dir/src/Graphics/Graphics.cpp.obj	ac1e1f1bdece0d77
+26	1377	7210747074154912	CMakeFiles/opengl_rectangle.dir/src/Graphics/RectData.cpp.obj	12bd93970df6375a
+44	1460	7210747075251231	CMakeFiles/opengl_rectangle.dir/src/Widget.cpp.obj	824124a92f0219c4
+17	1501	7210747075679816	CMakeFiles/opengl_rectangle.dir/src/Utils/Utils.cpp.obj	8548d4a94f085d07
+1	1514	7210747075819337	CMakeFiles/opengl_rectangle.dir/main.cpp.obj	4a75ce367f48d51a
+9	1547	7210747076098458	CMakeFiles/opengl_rectangle.dir/src/Shader.cpp.obj	24e8b2883fd38865
+1547	2028	7210747080921882	opengl_rectangle.exe	1fc305f42e5f68c4
