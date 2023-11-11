@@ -1,6 +1,6 @@
 #include"Widget.h"
 
-Widget::Widget(std::string title, int width, int height):
+Widget::Widget(const std::string& title, int width, int height):
     title_text(title),
     m_witdh(width),
     m_height(height),
@@ -26,7 +26,7 @@ void Widget::SetShader( const std::shared_ptr<Shader> &shader_value)
     m_Shader = shader_value;
 }
 
-void Widget::SetGraphics( const std::shared_ptr<RectData> &graphics_value)
+void Widget::SetGraphics( const std::shared_ptr<GraphicsEngine> &graphics_value)
 {
      m_RectData = graphics_value;
 }

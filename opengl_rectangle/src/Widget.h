@@ -11,7 +11,7 @@ class Widget
 {
 public:
 
-    Widget(std::string title = "opengl",int width = 800, int height = 600 );
+    Widget(const std::string& title = "opengl",int width = 800, int height = 600 );
     /*!
     @Description : 设置颜色
     @Author      : HeiSai
@@ -21,7 +21,7 @@ public:
 */
     void SetBackGround(GLfloat red,GLfloat green,GLfloat blue);
     void SetShader(const std::shared_ptr<Shader> &shader_value);
-    void SetGraphics(const std::shared_ptr<RectData> &graphics_value);
+    void SetGraphics(const std::shared_ptr<GraphicsEngine> &graphics_value);
     /*!
     @Description : 事件循环展示
     @Author      : HeiSai
@@ -68,7 +68,7 @@ private:
     GLfloat m_blue;
 
     std::shared_ptr<Shader>m_Shader;
-    std::shared_ptr<RectData>m_RectData;
+    std::shared_ptr<GraphicsEngine>m_RectData;
 
 
 };

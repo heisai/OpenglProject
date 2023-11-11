@@ -17,10 +17,10 @@ include_directories(${INCLUDEDIR})
 
 
 # 添加 .cpp
-file(GLOB_RECURSE SOURCE_FILES  ./src/*.cpp  ./src/Utils/*.cpp ./src/UtGraphicsils/*.cpp)
+file(GLOB_RECURSE SOURCE_FILES  ./src/*.cpp  ./src/Utils/*.cpp ./src/Graphics/*.cpp)
 
 # 添加 .h
-file(GLOB_RECURSE HEADER_FILES  ./src/*.h ./src/Utils/*.h  ./src/UtGraphicsils/*.h)
+file(GLOB_RECURSE HEADER_FILES  ./src/*.h ./src/Utils/*.h  ./src/Graphics/*.h)
 # 将源代码添加到此项目的可执行文件。
 add_executable (${PROJECT_NAME} main.cpp ${HEADER_FILES} ${SOURCE_FILES})
 

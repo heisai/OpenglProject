@@ -1,6 +1,10 @@
 #include"Graphics.h"
+GraphicsEngine::GraphicsEngine()
+{
 
-Graphics::Graphics()
+}
+
+void GraphicsEngine::Draw()
 {
 
 }

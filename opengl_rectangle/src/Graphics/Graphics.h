@@ -1,20 +1,22 @@
-#ifndef RECTDATA_H
-#define RECTDATA_H
+#ifndef GRAPHICSENGINE_H
+#define GRAPHICSENGINE_H
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
 #include<iostream>
 #include<filesystem>
 #include<vector>
-class Graphics
+/*
+    1: 图形引擎基类
+    2: Draw: 采用多态机制 运行时绑定
+*/
+class GraphicsEngine
 {
 public:
-     Graphics();
-protected:
-    virtual void BindBuffData() = 0;
-    virtual void Draw() = 0;
+    GraphicsEngine();
+    virtual void Draw();
 
-private:
-    unsigned int VBO, VAO, EBO;
-    unsigned int texture;
+protected:
+     unsigned int m_VBO, m_VAO, m_EBO;
+     unsigned int m_Texture;
 };
-#endif // RECTDATA_H
+#endif //GRAPHICSENGINE_H

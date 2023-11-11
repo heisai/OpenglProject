@@ -5,28 +5,26 @@
 
 #include<iostream>
 #include<filesystem>
-#include"Graphics.h"
-class RectData
+#include"./Graphics.h"
+class RectangleEngine : public GraphicsEngine
 {
 public:
-     RectData();
-    void BindBuffData();
+    RectangleEngine();
     void Draw();
 
 private:
-    unsigned int VBO, VAO, EBO;
-    unsigned int texture;
-    std::vector<float>vertice = {
+    std::vector<float>m_Vertice = {
             0.5f,  0.5f, 0.0f,  // top right
             0.5f, -0.5f, 0.0f,  // bottom right
            -0.5f, -0.5f, 0.0f,  // bottom left
            -0.5f,  0.5f, 0.0f   // top left
        };
 
-      std::vector<int>indices = {  // note that we start from 0!
+      std::vector<int>m_Indices = {  // note that we start from 0!
         0, 1, 3,  // first Triangle
         1, 2, 3   // second Triangle
     };
-
+//      unsigned int m_VBO, m_VAO, m_EBO;
+//      unsigned int m_Texture;
 };
 #endif // RECTDATA_H
