@@ -12,5 +12,7 @@ namespace  Utils {
     // 生成着色其内容
     void CreatShaderProgram(const std::string &vs, const std::string &fs);
 
+    std::string GlslAbsolute(const std::string& filename);
+
 }
 #endif // UTILS_H

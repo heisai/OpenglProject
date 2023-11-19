@@ -12,8 +12,7 @@ protected:
     void CreatProgram();
     void CreatShader();
     void BindShader();
-private:
-    std::string GlslAbsolute(const std::string& filename);
+
 private:
     const char* vShaderCode;
     const char* gShaderCode;

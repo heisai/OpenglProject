@@ -7,6 +7,7 @@
 #include<filesystem>
 
 #include"./Graphics.h"
+#include"../Utils/Utils.h"
 
 class RectTextureEngine : public GraphicsEngine
 {
@@ -15,7 +16,6 @@ public:
     void Draw() override;
 private:
     void InitTextures(unsigned int *data, const std::string& path,bool alpha = true);
-    void InitTextures1(unsigned int *data, const std::string& path,bool alpha = true);
     void InitBufferData();
 
 private:
