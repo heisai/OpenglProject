@@ -3,18 +3,13 @@
 #include "../stb_image.h"
 RectTextureEngine::RectTextureEngine():GraphicsEngine()
 {
-    InitBufferData();
     InitTextures(&m_Texture, Utils::GlslAbsolute("wall.jpg"));
     InitTextures(&m_Texture1, Utils::GlslAbsolute("awesomeface.png"),false);
-
-
 }
 
 
 void RectTextureEngine::Draw()
 {
-    
-   
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, m_Texture);
     glActiveTexture(GL_TEXTURE1);

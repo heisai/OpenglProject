@@ -1,4 +1,5 @@
-﻿#ifndef RECTTEXTURE_H
+﻿
+#ifndef RECTTEXTURE_H
 #define RECTTEXTURE_H
 #include <glad/glad.h>
 #include <GLFW/glfw3.h>
@@ -14,10 +15,9 @@ class RectTextureEngine : public GraphicsEngine
 public:
     RectTextureEngine();
     void Draw() override;
+    void InitBufferData() override;
 private:
     void InitTextures(unsigned int *data, const std::string& path,bool alpha = true);
-    void InitBufferData();
-
 private:
     std::vector<float>m_Vertice = {
                 // positions                    // texture coords
