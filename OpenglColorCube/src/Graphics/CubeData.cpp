@@ -18,6 +18,7 @@ void CubeDataEngine::Draw()
 
 	mvpmat4 = projection * view * model;
 	m_shader->setMat4("mvpmat4", mvpmat4);
+
 	//设置顶点属性指针
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
