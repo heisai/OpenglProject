@@ -13,12 +13,31 @@ void PhongModelEngine::Draw()
 	m_ImguiWidget->DrawImgui();
 	m_ImguiWidget->SetUniform();
 
+#if 1
 	//设置光源属性
 	m_shader->setVec3("LightData.positon", 0.0f, 1.0f, 5.0f);
-	m_shader->setVec3("LightData.ambient", 0.2f, 0.2f, 0.2f);
-	m_shader->setVec3("LightData.diffuse", 0.5f, 0.5f, 0.5f);
+	//m_shader->setVec3("LightData.ambient", 0.2f, 0.2f, 0.2f);
+	//m_shader->setVec3("LightData.diffuse", 0.5f, 0.5f, 0.5f);
+	//m_shader->setVec3("LightData.specular", 1.0f, 1.0f, 1.0f);
+
+
+	glm::vec3 lightColor;
+	lightColor.x = static_cast<float>(sin(glfwGetTime() * 2.0));
+	lightColor.y = static_cast<float>(sin(glfwGetTime() * 0.7));
+	lightColor.z = static_cast<float>(sin(glfwGetTime() * 1.3));
+	glm::vec3 diffuseColor = lightColor * glm::vec3(0.5f); // decrease the influence
+	glm::vec3 ambientColor = diffuseColor * glm::vec3(0.2f); // low influence
+	m_shader->setVec3("LightData.ambient", ambientColor);
+	m_shader->setVec3("LightData.diffuse", diffuseColor);
 	m_shader->setVec3("LightData.specular", 1.0f, 1.0f, 1.0f);
 
+#else
+	//设置光源属性
+	m_shader->setVec4("LightData.positon", 0.0f, 1.0f, 5.0f,1.0f);
+	m_shader->setVec4("LightData.ambient", 0.2f, 0.2f, 0.2f,1.0f);
+	m_shader->setVec4("LightData.diffuse", 0.5f, 0.5f, 0.5f,1.0f);
+	m_shader->setVec4("LightData.specular", 1.0f, 1.0f, 1.0f,1.0f);
+#endif 
 
 	// 设置 物体属性
 	/*m_shader->setVec3("MaterialData.ambient", 1.0f, 0.5f, 0.31f);

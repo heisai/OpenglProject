@@ -55,10 +55,18 @@ void PhongModelImGui::DrawImgui()
 void PhongModelImGui::SetUniform()
 {
 	m_MaterialAttrib->SetMaterialAttrib(m_ComboxItems[item_current]);
+#if 1
 	m_Shader->setVec3("MaterialData.ambient", m_MaterialAttrib->GetAmbient());
 	m_Shader->setVec3("MaterialData.diffuse", m_MaterialAttrib->GetDiffsue());
 	m_Shader->setVec3("MaterialData.specular", m_MaterialAttrib->GetSpecular());
 	m_Shader->setFloat("MaterialData.shiniess", m_MaterialAttrib->GetShininess());
+#else 
+	m_Shader->setVec4("MaterialData.ambient", m_MaterialAttrib->GetAmbientExt());
+	m_Shader->setVec4("MaterialData.diffuse", m_MaterialAttrib->GetDiffsueExt());
+	m_Shader->setVec4("MaterialData.specular", m_MaterialAttrib->GetSpecularExt());
+	m_Shader->setFloat("MaterialData.shiniess", m_MaterialAttrib->GetShininess());
+#endif 
+
 
 
 	glm::mat4 model = glm::mat4(1.0f); // make sure to initialize matrix to identity matrix first
@@ -85,9 +93,6 @@ void PhongModelImGui::SetUniform()
 	view = glm::translate(view, glm::vec3(move_int, 0.0, 0.0));
 
 	projection = glm::perspective(glm::radians(45.0f), (float)800 / (float)600, 0.1f, 100.0f);
-
-
-
 
 	m_Shader->setMat4("model", model);
 	m_Shader->setMat4("view", view);

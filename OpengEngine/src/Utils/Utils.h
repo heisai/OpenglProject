@@ -29,14 +29,21 @@ namespace  Utils {
 
         glm::vec3 GetSpecular();
 
+        glm::vec4 GetAmbientExt();
+
+        glm::vec4 GetDiffsueExt();
+
+        glm::vec4 GetSpecularExt();
+
         float GetShininess();
     private:
         class Material
         {
         public:
-            glm::vec3 m_Ambient;
-            glm::vec3 m_Diffsue;
-            glm::vec3 m_Specular;
+            glm::vec4 m_Ambient;
+            glm::vec4 m_Diffsue;
+            glm::vec4 m_Specular;
+ 
             float   m_Shininess;
         };
 
