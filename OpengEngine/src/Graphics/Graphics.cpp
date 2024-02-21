@@ -17,3 +17,8 @@ void GraphicsEngine::Drawwind(GLFWwindow* window)
 {
 
 }
+
+void GraphicsEngine::InitTextures(unsigned int* texture, const std::string& path, bool alpha)
+{
+  
+}

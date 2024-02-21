@@ -12,6 +12,7 @@ void PhongModelEngine::Draw()
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	m_ImguiWidget->DrawImgui();
 	m_ImguiWidget->SetUniform();
+	
 
 #if 1
 	//设置光源属性

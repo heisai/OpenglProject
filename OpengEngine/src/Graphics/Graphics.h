@@ -17,11 +17,12 @@ public:
     virtual void Draw() = 0;
     virtual void InitBufferData() = 0;
     virtual void Drawwind(GLFWwindow* window);
+    virtual void InitTextures(unsigned int* data, const std::string& path, bool alpha = true);
 
     /*virtual ~ GraphicsEngine();*/
 public:
      unsigned int m_VBO, m_VAO, m_EBO;
-     unsigned int m_Texture, m_Texture1;
+     unsigned int m_Texture, m_Texture1, m_Texture2;
      std::shared_ptr<Shader>m_shader;
 };
 #endif //GRAPHICSENGINE_H

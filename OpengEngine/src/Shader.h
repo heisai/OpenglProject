@@ -18,7 +18,7 @@ public:
 		glUniform1i(glGetUniformLocation(ShaderPromger, name.c_str()), (int)value);
 	}
 	// ------------------------------------------------------------------------
-	void setInt(const std::string& name, int value) const
+	void SetInt(const std::string& name, int value) const
 	{
 		glUniform1i(glGetUniformLocation(ShaderPromger, name.c_str()), value);
 	}

@@ -56,6 +56,7 @@ int main()
 	w.Show();
 #endif 
 
+#if 1
 	Widget w;
 	std::shared_ptr<Shader>m_Shader = std::make_shared<Shader>("123.vert", "456.frag", "PhongModel");
 	std::shared_ptr<GraphicsEngine>m_RectData = std::make_shared<PhongModelEngine>(m_Shader);
@@ -63,4 +64,17 @@ int main()
 	w.SetGraphics(m_RectData);
 	w.SetBackGround(0.2f, 0.3f, 0.3f);
 	w.Show();
+#endif 
+
+
+#if 0
+	Widget w;
+	std::shared_ptr<Shader>m_Shader = std::make_shared<Shader>("123.vert", "456.frag", "LightMap");
+	std::shared_ptr<GraphicsEngine>m_RectData = std::make_shared<LightMapsEngine>(m_Shader);
+	w.SetShader(m_Shader);
+	w.SetGraphics(m_RectData);
+	w.SetBackGround(0.2f, 0.3f, 0.3f);
+	w.Show();
+#endif
+
 }

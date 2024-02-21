@@ -5,5 +5,6 @@
 #include"src/Graphics/ColorCubeEngine.h"
 #include"src/Graphics/CameraControlEngine.h"
 #include "src/Graphics/PhongModelEngine.h"
+#include"src/Graphics/LightMapsEngine.h"
 
 
